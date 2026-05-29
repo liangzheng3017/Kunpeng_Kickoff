@@ -1,73 +1,95 @@
-# React + TypeScript + Vite
+# 🚀 Kunpeng Kickoff
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> AI 驱动的一站式电竞赛事出行服务平台 —— 让每一次出征都万无一失。
 
-Currently, two official plugins are available:
+## 📖 项目简介
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Kunpeng Kickoff 是一个面向电竞赛事参与者的智能出行管理平台，通过 AI 技术整合赛事信息、目的地数据、社区经验，为选手和团队提供从行程规划到落地避雷的全链路服务。
 
-## React Compiler
+## ✨ 核心功能
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| 模块 | 说明 |
+|------|------|
+| 🧠 **AI 行程规划** | 智能生成行前清单、签证提醒、航班推荐、住宿评估 |
+| 📊 **硬标数据库** | 赛事目的地住宿、餐饮、交通、医疗硬性标准数据 |
+| 🛡️ **避雷雷达** | 风险区域预警、诈骗识别、商户欺诈提醒 |
+| 👥 **社区层** | 搭子匹配、Q&A 问答、用户标签云 |
+| 💰 **商业模式** | 收入来源分析、付费方价值主张 |
+| 🗺️ **运营路线图** | 分阶段里程碑规划与进度跟踪 |
 
-## Expanding the ESLint configuration
+## 🛠 技术栈
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **前端框架**: React 19 + TypeScript
+- **构建工具**: Vite 7
+- **样式方案**: Tailwind CSS 3 + shadcn/ui
+- **路由**: React Router 7
+- **动画**: Framer Motion
+- **图表**: Recharts
+- **表单**: React Hook Form + Zod
+- **主题**: next-themes（深色/浅色模式）
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 快速开始
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 环境要求
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js >= 18
+- npm >= 9
+
+### 安装与运行
+
+```bash
+# 克隆项目
+git clone https://github.com/liangzheng3017/Kunpeng_Kickoff.git
+cd Kunpeng_Kickoff
+
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+浏览器访问 `http://localhost:5173` 即可查看。
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 其他命令
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# 构建生产版本
+npm run build
+
+# 预览生产构建
+npm run preview
+
+# 代码检查
+npm run lint
 ```
+
+## 📁 项目结构
+
+```
+src/
+├── components/          # 组件
+│   ├── business/        # 商业模式 & 路线图组件
+│   ├── community/       # 社区层组件
+│   ├── home/            # 首页组件
+│   ├── layout/          # 布局（导航栏、页脚）
+│   ├── metrics/         # 硬标数据库组件
+│   ├── planner/         # AI 行程规划组件
+│   ├── radar/           # 避雷雷达组件
+│   └── ui/              # shadcn/ui 基础组件
+├── data/                # Mock 数据 & 类型导出
+├── icons/               # SVG 图标组件
+├── lib/                 # 工具函数
+├── pages/               # 页面路由
+├── types/               # TypeScript 类型定义
+├── App.tsx              # 根组件 & 路由配置
+└── main.tsx             # 入口文件
+```
+
+## 📄 License
+
+MIT
+
+---
+
+**Made with ❤️ by Kunpeng Team**
